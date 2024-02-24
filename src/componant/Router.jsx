@@ -1,20 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import IndividualPolicy from './IndividualPolicy';
 import ViewMemberPage from './ViewMemberPage';
 import AddFamilyMemberForm from './FamilyPolicy';
+import Payment from './Payment';
 
-export default function AppRouter() {
+function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<IndividualPolicy />} /> */}
-        {/* <Switch> */}
-        {/* <Route path="/view-members" element={<ViewMemberPage />} /> */}
-        <Route path="/FamilyPolicy" element={<AddFamilyMemberForm />} />
-        {/* </Switch> */}
-        
+        <Route path="/ViewMemberPage" element={<ViewMemberPage />} />
+        <Route path="/" element={<AddFamilyMemberForm/>} />
+        <Route path="/Payment" element={<Payment />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
+export default AppRouter;

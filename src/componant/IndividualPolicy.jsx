@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './IndividualPolicy.css';
+// import { useNavigate } from 'react-router-dom';
 
 const IndividualPolicy = () => {
   const [fullName, setFullName] = useState('');
@@ -10,6 +11,13 @@ const IndividualPolicy = () => {
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [gender, setGender] = useState('');
   const [occupation, setOccupation] = useState('');
+
+  // const navigate = useNavigate(); 
+    
+  // const handleButtonClick = () => {
+     
+  //     navigate('/ViewMemberPage');
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -105,6 +113,10 @@ const IndividualPolicy = () => {
           </select>
         </div>
         <button type="submit" className="btn btn-primary">Add Family Member</button>
+        {/* <span style={{ marginRight: '170px' }}></span>
+       
+       <button onClick={handleButtonClick} style={{ backgroundColor: '#007bff', color: 'white', border: 'none', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer' }}>Proceed to Payment</button>
+        */}
       </form>
     </div>
   );
